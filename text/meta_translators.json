@@ -1,0 +1,56 @@
+{
+	"thanissaro": {
+		"label": "Thanissaro",
+		"name": "Thanissaro Bhikkhu",
+		"type": "text",
+		"license": "English translation &copy; 1997 <a href=\"https:\/\/en.wikipedia.org\/wiki\/Thanissaro_Bhikkhu\">Thanissaro Bhikkhu<\/a>. Licensed under a <a rel=\"license\" href=\"https:\/\/creativecommons.org\/licenses\/by-nc\/4.0\/\">Creative Commons Attribution-NonCommercial 4.0 International License<\/a>."
+	},
+    "fronsdal": {
+        "label": "Fronsdal",
+        "name": "Gil Fronsdal",
+		"type": "audio",
+        "license": "This material is licensed under the <a rel=\"license\" href=\"https:\/\/creativecommons.org\/licenses\/by-nc-nd\/3.0\/\">Creative Commons License<\/a>. You may make and\/or distribute copies, provided that you do so freely without cost, follow the guidelines of the license, and this notice is included with all copies."
+    },
+    "edmunds": {
+        "label": "Edmunds",
+        "name": "Albert Edmunds",
+		"type": "text",
+        "license": "English translation by Albert Edmunds, from <a href=\"https:\/\/books.google.com\/books?id=eodHAAAAIAAJ&printsec=frontcover&source=gbs_ge_summary_r&cad=0#v=onepage&q&f=false\">Hymns of the Faith (Dhammapada)<\/a> (1902)."
+    },
+    "buddharakkhita": {
+        "label": "Buddharakkhita",
+        "name": "Acharya Buddharakkhita",
+		"type": "text",
+        "license": "English translation &copy; 1985 Buddhist Publication Society, Kandy, Sri Lanka. From <a href=\"https:\/\/www.buddhanet.net\/pdf_file\/scrndhamma.pdf\">The Dhammapada: The Buddha\u2019s Path of Wisdom<\/a>, translated from the Pali by <a href=\"https:\/\/en.wikipedia.org\/wiki\/Acharya_Buddharakkhita\">Acharya Buddharakkhita<\/a>."
+    },
+    "muller": {
+        "label": "M\u00fcller",
+        "name": "Max M\u00fcller",
+		"type": "text",
+        "license": "English translation by <a href=\"https:\/\/en.wikipedia.org\/wiki\/Max_M\u00fcller\">Max M\u00fcller<\/a>, from <a href=\"https:\/\/www.gutenberg.org\/files\/2017\/2017-h\/2017-h.htm\">The Sacred Books of the East<\/a> (1881)."
+    },
+    "tin": {
+        "label": "Tin",
+        "name": "Daw Mya Tin",
+		"type": "text",
+        "license": "English translation by Daw Mya Tin. Edited by Editorial Committee, Burma Tipitaka Association Rangoon, Burma, 1986. For free distribution only, as a gift of dhamma."
+    },
+    "fischer": {
+        "label": "Fischer",
+        "name": "Barnett Fischer",
+		"type": "text",
+        "license": "English translation &copy; 2002 Barnett Fischer. This is a gift of Dhamma and may be freely copied or reprinted without permission from the author or publisher. Otherwise all rights reserved."
+    },
+    "weragoda": {
+        "label": "Weragoda",
+		"type": "text",
+        "name": "Weragoda Sarada Maha Thero",
+        "license": "English translation by Ven. Weragoda Sarada Maha Thero. For free distribution only."
+    },
+    "narada": {
+        "label": "Narada",
+        "name": "Narada Maha Thera",
+		"type": "text",
+        "license": "English translation by Ven. Narada Maha Thera. For free distribution only."
+    }
+}
