@@ -82,14 +82,14 @@ if($uri[0] == 'gatha') {
 	$previous_verse = $verse == 1 ? 423 : $verse - 1;
 	$next_verse = $verse == 423 ? 1 : $verse + 1;
 	
-	$nav = '<nav class="even_smaller">';
+	$nav = '<nav class="even-smaller">';
 	$nav .= '<ul class="horizontal">';
 	$nav .= '<li><a href="/dhammapada/gatha/'.$previous_verse.'/translation/'.$translation.'"><i class="fas fa-arrow-alt-circle-left"></i> Previous</a></li>';
 	$nav .= '<li><a href="/dhammapada/gatha/'.$next_verse.'/translation/'.$translation.'">Next <i class="fas fa-arrow-alt-circle-right"></i></a></li>';
 	$nav .= '<li style="margin: 0 1em 0 0.5em;"><a href="/dhammapada/random"><i class="fas fa-random"></i> Random</a></li>';
 	$nav .= '<li style="margin: 0 1em 0 0;"><a href="/dhammapada/chapter/'.$chapter.'"><i class="far fa-th-large"></i> Chapter '.$chapter.'</a></li>';
 	$nav .= '<li><a href="/dhammapada/verses/"><i class="far fa-stop"></i> Verse '.$verse.'</a></li>';
-	$nav .= '<li><form style="margin: 0 0 0 1em; padding: 0; display: inline;" action="/dhammapada/search/" method="post"><i class="fas fa-search"></i> <input style="font-size: inherit; width: 5em; margin: 0; padding: 0; border: 0; background: inherit; border-bottom: 1px solid #000; border-radius: 0;" type="text" name="query" id="query"></form></li>';
+	$nav .= '<li><form style="margin: 0 0 0 1em; padding: 0; display: inline;" action="/dhammapada/search/" method="post"><i class="fas fa-search"></i> <input style="font-size: inherit; width: 5em; margin: 0; padding: 0; border: 0; background: inherit; border-bottom: 1px solid var(--foreground); border-radius: 0;" type="text" name="query" id="query"></form></li>';
 	$nav .= '</ul>';
 	$nav .= '</nav>';
 	
@@ -124,12 +124,12 @@ if($uri[0] == 'gatha') {
 	
 	$text = implode(' ', $processed);
 	
-	$info = '<p class="even_smaller"><small><i class="fas fa-info-circle"></i> Click any Pāli word for an inline definition.</small></p>';
+	$info = '<p class="even-smaller"><small><i class="fas fa-info-circle"></i> Click any Pāli word for an inline definition.</small></p>';
 	
 	output('<div>'.$text.$info.$pali_audio.'</div>');
 	
 	// Prepare translation bar
-	$translation_nav = '<nav class="even_smaller">';
+	$translation_nav = '<nav class="even-smaller">';
 	$translation_nav .= '<ul class="horizontal">';
 	foreach($translators as $translator => $data) {
 		if($translation == $translator) {
