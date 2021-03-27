@@ -117,7 +117,9 @@ if($uri[0] == 'gatha') {
 		foreach($text as $word) {
 			$word_tmp = str_replace("\\n", '', strtolower($word));
 			$newline = $i == count($text) ? '<br>' : null;
-			$processed[] = '<a class="clickable word" data-part="'.$glossary->$word_tmp->part.'" data-definition="'.$glossary->$word_tmp->definition.'">'.$word.'</a>'.$newline;
+			if(isset($glossary->$word_tmp)) {
+				$processed[] = '<a class="clickable word" data-part="'.$glossary->$word_tmp->part.'" data-definition="'.$glossary->$word_tmp->definition.'">'.$word.'</a>'.$newline;
+			}
 			$i++;
 		}
 	}
@@ -151,7 +153,7 @@ if($uri[0] == 'gatha') {
 	output('<h2>'.$chapters->$chapter->english.' ⧸ Verse '.$verse.'</h2>');
 	
 	// Load translation
-	if($translators->$translation->type == 'audio') {
+	if(isset($translators->$translation->type) && $translators->$translation->type == 'audio') {
 		
 		if(file_exists(SITE_PATH.'audio/fronsdal/'.$verse.'.mp3')) {
 			$translation_text = '<p>Gil Fronsdal’s reading of verse '.$verse.' at the <a href="https://www.insightmeditationcenter.org/books-articles/">Insight Meditation Center</a>:</p><audio controls><source src="/dhammapada/audio/fronsdal/'.$verse.'.mp3" /><a href="/dhammapada/audio/fronsdal/'.$verse.'.mp3">Verse '.$verse.'</a></audio>';
@@ -161,11 +163,14 @@ if($uri[0] == 'gatha') {
 		}
 		output($translation_text);
 	}
-	if($translators->$translation->type == 'text') {
+	if(isset($translators->$translation->type ) && $translators->$translation->type == 'text') {
 		$translation_text = json_decode(file_get_contents(SITE_PATH.'text/translation_'.$translation.'.json'));
 		output('<div style="white-space: pre-wrap; word-wrap: break-word;">'.$translation_text->$verse.'</div>');
 	}
-	output('<div><small>'.$translators->$translation->license.'</small></div>');
+	
+	$license = isset($translators->$translation->license) ? $translators->$translation->license : null;
+	
+	output('<div><small>'.$license.'</small></div>');
 }
 
 /* Chapter list */
